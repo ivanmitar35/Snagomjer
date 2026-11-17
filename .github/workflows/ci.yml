@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint (ESLint + Prettier)
+        run: npm run lint
+
+      - name: Tipovi
+        run: npx tsc --noEmit
+
+      - name: Testovi
+        run: npm test -- --ci
+
+      - name: Verzije paketa usklađene s Expo SDK-om
+        run: npx expo install --check
+
+      - name: Migracije usklađene sa shemom
+        run: |
+          npx drizzle-kit check
+          npx drizzle-kit generate
+          if [ -n "$(git status --porcelain drizzle)" ]; then
+            git status --porcelain drizzle
+            echo "::error::Shema i migracije nisu usklađene. Pokreni 'npx drizzle-kit generate' i commitaj mapu drizzle/."
+            exit 1
+          fi

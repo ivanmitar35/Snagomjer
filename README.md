@@ -4,7 +4,7 @@ Mobilna aplikacija za bilježenje i analizu treninga snage. Seriju se unosi u ne
 
 FER timski projekt, 5 članova, 2026./2027.
 
-> **Status:** u razvoju. Expo projekt još nije postavljen, pa naredbe iz odjeljaka Pokretanje i Razvoj rade tek nakon prvog PR-a. MVP (unos i povijest) do 18.12.2026., `v1.0.0` na primopredaji 29.1.2027.
+> **Status:** u razvoju (Expo SDK 58). MVP (unos i povijest) do 18.12.2026., `v1.0.0` na primopredaji 29.1.2027.
 
 ## Funkcionalnosti
 
@@ -75,7 +75,8 @@ Gotov Android APK nalazi se pod [Releases](../../releases).
 | Naredba | Što radi |
 | --- | --- |
 | `npx expo start` | razvojni server; promjene se odmah vide na mobitelu |
-| `npm run lint` | ESLint + Prettier |
+| `npm run lint` | ESLint + Prettier (provjera) |
+| `npm run format` | Prettier formatira sve datoteke |
 | `npx tsc --noEmit` | provjera tipova |
 | `npm test` | Jest testovi |
 | `npx drizzle-kit generate` | SQL migracija nakon promjene sheme baze |
@@ -100,7 +101,7 @@ docs/       projektna dokumentacija, zadatak, slike (WBS, gantogram)
 AGENTS.md   pravila za AI agente
 ```
 
-Mape `app/`, `src/` i `drizzle/` nastaju s Expo projektom. Detaljna struktura je u [tehničkom planu, odj. 8](docs/tehnicki_plan.md#8-struktura-koda-i-baza-u-praksi).
+Detaljna struktura je u [tehničkom planu, odj. 8](docs/tehnicki_plan.md#8-struktura-koda-i-baza-u-praksi).
 
 ## Dokumentacija
 
