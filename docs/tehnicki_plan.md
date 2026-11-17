@@ -1,6 +1,6 @@
 # Snagomjer: tehnički plan
 
-> Radna verzija 0.1 (17.11.2026). Tehnički dio [plan_projekta.md](../plan_projekta.md), bez organizacije predmeta (tim, zapisnici, gantogram). Odjeljci označeni s **Prijedlog** treba potvrditi do M2 (4.12.2026).
+> Radna verzija 0.2 (17.11.2026). Tehnički dio projekta. Organizacija (tim, faze, WBS, gantogram, zapisnici) je u [Projektna_dokumentacija_v1.1.docx](Projektna_dokumentacija_v1.1.docx). Odjeljci označeni s **Prijedlog** treba potvrditi do M2 (4.12.2026).
 
 ## 1. Opseg i ograničenja
 
@@ -13,6 +13,7 @@ Snagomjer je mobilna aplikacija za bilježenje treninga snage (vježbe, serije, 
 | Android je obavezna platforma | isporučuje se APK (EAS Build) |
 | iOS bez plaćenog Apple računa | iOS se testira samo u Expo Go; koriste se samo moduli iz Expo SDK-a |
 | Unos tijekom treninga, jednom rukom | veliki dodirni elementi, unos bez tipkovnice gdje god je moguće |
+| Sučelje samo na engleskom | jedan jezik, bez i18n; brojevi i datumi formatiraju se preko `Intl` |
 
 ## 2. Zahtjevi
 
@@ -126,7 +127,7 @@ app/
 ├── _layout.tsx            Stack; otvaranje baze i migracije
 ├── (tabs)/
 │   ├── _layout.tsx        donja traka
-│   ├── index.tsx          Početna: „Započni trening”, zadnji treninzi, tjedni sažetak
+│   ├── index.tsx          Početna: „Start workout”, zadnji treninzi, tjedni sažetak
 │   ├── history.tsx        Povijest: popis treninga po datumu
 │   └── settings.tsx       Postavke: jedinice, tema, sigurnosna kopija
 ├── workout/
@@ -200,7 +201,6 @@ Besplatni EAS plan ima ograničen broj buildova, pa se APK gradi samo za izdanja
 
 ## 13. Otvorena tehnička pitanja
 
-- Jezik sučelja: hrvatski, engleski ili oba (ako oba, i18n od početka)
 - Testiranje repozitorija: `better-sqlite3` ili mock (odj. 9)
 - 1RM za 1 ponavljanje: Epley daje težina × 1,033; prikazati stvarnu težinu?
 - Tjelesne vježbe (zgibovi, sklekovi): težina 0 daje volumen 0; treba li dodatno opterećenje ili prikaz samo ponavljanja?
