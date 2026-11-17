@@ -1,6 +1,6 @@
 # Snagomjer: tehnički plan
 
-> Radna verzija 0.2 (17.11.2026). Tehnički dio projekta. Organizacija (tim, faze, WBS, gantogram, zapisnici) je u [Projektna_dokumentacija_v1.1.docx](Projektna_dokumentacija_v1.1.docx). Odjeljci označeni s **Prijedlog** treba potvrditi do M2 (4.12.2026).
+> Radna verzija 0.2 (17.11.2026). Tehnički dio projekta. Organizacija (tim, faze, WBS, gantogram, zapisnici) je u [Projektna_dokumentacija_v1.2.docx](Projektna_dokumentacija_v1.2.docx). Odjeljci označeni s **Prijedlog** treba potvrditi do M2 (11.12.2026).
 
 ## 1. Opseg i ograničenja
 
@@ -183,7 +183,7 @@ Besplatni EAS plan ima ograničen broj buildova, pa se APK gradi samo za izdanja
 
 | Kontrolna točka | Datum | Tehnički rezultat | Verzija |
 | --- | --- | --- | --- |
-| M2 | 4.12.2026. | Expo projekt, CI, lint, Drizzle postavke, shema v1, prototip (baza + jedan graf) | |
+| M2 | 11.12.2026. | Expo projekt, CI, lint, Drizzle postavke, shema v1, prototip (baza + jedan graf) | |
 | M3 | 18.12.2026. | katalog vježbi, aktivni trening s brzim unosom, izračun volumena, povijest | `v0.1.0` |
 | M4 | 15.1.2027. | grafovi, 1RM, osobni rekordi, Should funkcije; nakon toga nema novih funkcija | `v0.2.0` |
 | M5 | 22.1.2027. | ispravci nakon testiranja s korisnicima | `v0.3.0` |

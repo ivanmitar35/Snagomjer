@@ -106,7 +106,7 @@ Detaljna struktura je u [tehničkom planu, odj. 8](docs/tehnicki_plan.md#8-struk
 ## Dokumentacija
 
 - [docs/tehnicki_plan.md](docs/tehnicki_plan.md): zahtjevi, arhitektura, model podataka, izračuni, ekrani, testiranje
-- [docs/Projektna_dokumentacija_v1.1.docx](docs/Projektna_dokumentacija_v1.1.docx): službena projektna dokumentacija (FER predložak)
+- [docs/Projektna_dokumentacija_v1.2.docx](docs/Projektna_dokumentacija_v1.2.docx): službena projektna dokumentacija (FER predložak)
 - [docs/zadatak.txt](docs/zadatak.txt): zadatak projekta
 - [AGENTS.md](AGENTS.md): pravila za AI agente (Codex, Cursor, Copilot i drugi). Za Claude Code napravi lokalni `CLAUDE.md` s retkom `@AGENTS.md`; datoteka je u `.gitignore`.
 

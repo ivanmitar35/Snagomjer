@@ -97,16 +97,16 @@ tasks = [
     (0, "Formiranje tima, uloge", "2026-11-10", 4),
     (0, "Alati, plan projekta", "2026-11-16", 5),
     (0, "M1 Plan projekta v1", "2026-11-20", None),
-    (1, "Analiza sličnih aplikacija", "2026-11-23", 4),
-    (1, "Korisničke priče, prioriteti", "2026-11-23", 7),
-    (1, "Wireframeovi", "2026-11-26", 7),
-    (1, "Model podataka", "2026-11-30", 4),
-    (1, "Expo projekt + prototip", "2026-11-23", 12),
-    (1, "M2 Specifikacija gotova", "2026-12-04", None),
-    (2, "Podatkovni sloj", "2026-12-07", 7),
-    (2, "Katalog vježbi", "2026-12-07", 7),
-    (2, "Unos treninga", "2026-12-09", 10),
-    (2, "Povijest treninga", "2026-12-14", 5),
+    (1, "Postavljanje Expo projekta", "2026-11-17", 4),
+    (1, "Analiza sličnih aplikacija", "2026-12-07", 3),
+    (1, "Korisničke priče, prioriteti", "2026-12-07", 5),
+    (1, "Model podataka", "2026-12-07", 4),
+    (1, "Wireframeovi, prototip", "2026-12-08", 4),
+    (1, "M2 Specifikacija gotova", "2026-12-11", None),
+    (2, "Podatkovni sloj", "2026-12-10", 5),
+    (2, "Katalog vježbi", "2026-12-11", 5),
+    (2, "Unos treninga", "2026-12-14", 5),
+    (2, "Povijest treninga", "2026-12-16", 3),
     (2, "M3 MVP", "2026-12-18", None),
     (3, "Grafovi napretka", "2027-01-07", 9),
     (3, "Osobni rekordi, 1RM", "2027-01-07", 6),
@@ -153,12 +153,14 @@ for sp in ["right", "left"]:
 for sp in ["top", "bottom"]:
     ax.spines[sp].set_color("#999")
 
-# holidays band
-h0, h1 = mdates.date2num(D("2026-12-21")), mdates.date2num(D("2027-01-07"))
-ax.add_patch(Rectangle((h0, -0.7), h1 - h0, n + 0.4, color="#eeeeee", zorder=1))
-ax.text((h0 + h1) / 2, n / 2, "Božićni praznici\n(rezerva)", ha="center", va="center",
-        fontsize=7.5, color="#666", zorder=1.5,
-        bbox=dict(fc="#eeeeee", ec="none", pad=2))
+# blocked periods: midterms (no work) and Christmas holidays (buffer)
+for b0, b1, text in [("2026-11-23", "2026-12-05", "Međuispiti\n(bez rada)"),
+                     ("2026-12-21", "2027-01-07", "Božićni praznici\n(rezerva)")]:
+    h0, h1 = mdates.date2num(D(b0)), mdates.date2num(D(b1))
+    ax.add_patch(Rectangle((h0, -0.7), h1 - h0, n + 0.4, color="#eeeeee", zorder=1))
+    ax.text((h0 + h1) / 2, n / 2, text, ha="center", va="center",
+            fontsize=7.5, color="#666", zorder=1.5,
+            bbox=dict(fc="#eeeeee", ec="none", pad=2))
 
 # phase separators
 prev = None
