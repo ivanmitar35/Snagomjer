@@ -1,0 +1,77 @@
+# Ovisnosti
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Generirane nativne mape (EAS Build ih stvara sam)
+/ios
+/android
+.kotlin/
+
+# Potpisni ključevi i certifikati
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.pem
+*.mobileprovision
+*.orig.*
+
+# Lokalni buildovi
+*.apk
+*.aab
+*.ipa
+
+# Metro
+.metro-health-check*
+
+# Logovi
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# Varijable okruženja
+.env
+.env*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Testovi
+coverage/
+
+# Lokalne SQLite baze
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+
+# Python (docs/slike/crtanje_slika.py)
+__pycache__/
+*.pyc
+.venv/
+
+# Uređivači
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# Office lock datoteke
+~$*
+
+# Operacijski sustav
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Claude Code
+CLAUDE.md
+.claude/

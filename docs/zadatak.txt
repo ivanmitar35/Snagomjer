@@ -1,0 +1,7 @@
+Tema:
+Mobilna aplikacija za praćenje i analizu rezultata treninga snage
+
+Opis:
+Praćenje rezultata treninga snage važno je za planiranje vježbanja i procjenu ostvarenog napretka. Tradicionalno bilježenje podataka u bilježnicama može biti nepraktično, dok postojeće mobilne aplikacije često nude velik broj funkcionalnosti koje otežavaju jednostavan i brz unos podataka tijekom treninga.
+U okviru projekta potrebno je razviti mobilnu aplikaciju koja omogućuje jednostavno i učinkovito bilježenje treninga snage te praćenje ostvarenih rezultata. Aplikacija treba omogućiti odabir vježbi, unos broja serija i ponavljanja te korištenih opterećenja, kao i pregled prethodno odrađenih treninga. Na temelju unesenih podataka potrebno je automatski izračunavati ukupno opterećenje po vježbi (umnožak broja serija, ponavljanja i korištene težine) te omogućiti grafički prikaz opterećenja, broja ponavljanja i drugih pokazatelja napretka kroz vrijeme. Posebnu pažnju potrebno je usmjeriti na preglednost korisničkog sučelja i jednostavnost unosa podataka tijekom treninga, uz mogućnost brzog pristupa prethodno zabilježenim rezultatima.
+Cilj projekta jest razviti intuitivnu mobilnu aplikaciju koja pojednostavnjuje bilježenje treninga snage, omogućuje analizu i vizualizaciju ostvarenih rezultata te korisnicima pruža jasan uvid u vlastiti napredak kroz vrijeme.
