@@ -1,6 +1,6 @@
 # Snagomjer: tehnički plan
 
-> Radna verzija 0.2 (17.11.2026). Tehnički dio projekta. Organizacija (tim, faze, WBS, gantogram, zapisnici) je u [Projektna_dokumentacija_v1.1.docx](Projektna_dokumentacija_v1.1.docx). Odjeljci označeni s **Prijedlog** treba potvrditi do M2 (11.12.2026).
+> Radna verzija 0.2 (17.11.2026). Tehnički dio projekta. Organizacija (tim, faze, WBS, gantogram, zapisnici) je u [Projektna_dokumentacija_v1.2.docx](Projektna_dokumentacija_v1.2.docx). Odjeljci označeni s **Prijedlog** treba potvrditi do M2 (11.12.2026).
 
 ## 1. Opseg i ograničenja
 
