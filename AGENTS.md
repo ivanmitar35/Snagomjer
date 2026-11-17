@@ -2,8 +2,6 @@
 
 Mobilna aplikacija za bilježenje i analizu treninga snage (FER timski projekt, 5 članova). Opis, pokretanje i način rada: [README.md](README.md). Zahtjevi, arhitektura, model podataka i izračuni: [docs/tehnicki_plan.md](docs/tehnicki_plan.md).
 
-> Expo projekt još nije postavljen. Nastaje u prvom PR-u, a naredbe i mape ispod do tada ne postoje.
-
 ## Jezik
 
 - Dokumentacija, commit poruke, PR-ovi i issueovi: hrvatski.
@@ -23,6 +21,7 @@ Mobilna aplikacija za bilježenje i analizu treninga snage (FER timski projekt, 
 ```bash
 npx expo start              # razvojni server
 npm run lint                # ESLint + Prettier
+npm run format              # Prettier ispravlja formatiranje
 npx tsc --noEmit            # tipovi
 npm test                    # Jest
 npx drizzle-kit generate    # migracija nakon promjene sheme
@@ -32,11 +31,12 @@ Prije završetka zadatka moraju proći lint, tipovi i testovi.
 
 ## Pravila koda
 
-- Upiti u bazu samo u `src/db/repositories/`. Repozitoriji primaju `db` kao parametar (testovi koriste `better-sqlite3` s bazom u memoriji).
+- Upiti u bazu samo u `src/db/repositories/`. Repozitoriji primaju `db` kao parametar (način testiranja repozitorija je otvoreno pitanje, odj. 13 tehničkog plana).
 - Izračuni (volumen, 1RM, rekordi) su čiste funkcije u `src/lib/calculations.ts`, s unit testovima. Zagrijavajuće serije ne ulaze u izračune.
-- Ekrani su u `app/` (Expo Router) i ne sadrže upite ni izračune. Podatke čitaju preko hookova iz `src/hooks/`.
+- Ekrani su u `app/` u korijenu repozitorija (Expo Router; ne u `src/app/` kao u Expo predlošku) i ne sadrže upite ni izračune. Podatke čitaju preko hookova iz `src/hooks/`.
 - Težina se sprema u kg, vrijeme kao Unix ms. Pretvorba u lb samo pri prikazu i unosu (`src/lib/units.ts`).
 - Aktivni trening sprema se odmah: svaka serija upisuje se u bazu čim se potvrdi, ne drži se samo u stanju komponente.
+- Strani ključevi u SQLite-u rade samo uz `PRAGMA foreign_keys = ON`, koji se postavlja u `src/db/client.ts`. Kaskadno brisanje i `RESTRICT` ovise o tome.
 - Promjena `src/db/schema.ts` uvijek ide s novom migracijom iz `drizzle-kit generate`. Generirane migracije u `drizzle/` se ne uređuju ručno i commitaju se.
 
 ## Odluke i otvorena pitanja
@@ -54,4 +54,4 @@ Prije završetka zadatka moraju proći lint, tipovi i testovi.
 
 ## Održavanje dokumentacije
 
-Kad promjena uvede ili promijeni naredbu, mapu, paket, pravilo koda, arhitekturu, ograničenje ili rok, u istom PR-u ažuriraj ovu datoteku i, ako treba, README i tehnički plan. Zastarjele napomene (npr. da Expo projekt još nije postavljen) makni. Ovdje piši samo ono što se ne vidi iz koda.
+Kad promjena uvede ili promijeni naredbu, mapu, paket, pravilo koda, arhitekturu, ograničenje ili rok, u istom PR-u ažuriraj ovu datoteku i, ako treba, README i tehnički plan. Zastarjele napomene makni. Ovdje piši samo ono što se ne vidi iz koda.

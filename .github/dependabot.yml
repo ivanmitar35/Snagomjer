@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # npm pakete ažuriramo ručno s `npx expo install --fix` (usklađenost s Expo SDK-om).
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

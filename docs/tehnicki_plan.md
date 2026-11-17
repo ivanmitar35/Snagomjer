@@ -156,7 +156,7 @@ drizzle/                   generirane migracije, u gitu
 drizzle.config.ts          dialect: sqlite, driver: expo
 ```
 
-**Tijek promjene sheme:** izmjena `src/db/schema.ts` → `npx drizzle-kit generate` → commit nove migracije iz `drizzle/`. Pri pokretanju aplikacija migracije primjenjuje hookom `useMigrations` (`drizzle-orm/expo-sqlite/migrator`). Da bi Metro učitao `.sql` datoteke, treba `babel-plugin-inline-import` i ekstenziju `sql` u `metro.config.js`. CI ponovno pokreće `drizzle-kit generate` i javlja grešku ako nastane nova datoteka, jer to znači da migracija nije commitana.
+**Tijek promjene sheme:** izmjena `src/db/schema.ts` → `npx drizzle-kit generate` → commit nove migracije iz `drizzle/`. Pri pokretanju aplikacija migracije primjenjuje hookom `useMigrations` (`drizzle-orm/expo-sqlite/migrator`). Da bi Metro učitao `.sql` datoteke, treba `babel-plugin-inline-import` u `babel.config.js` i ekstenziju `sql` u `metro.config.js`. Baza se otvara s `PRAGMA foreign_keys = ON`, inače SQLite ne provodi kaskadno brisanje ni `RESTRICT`. CI ponovno pokreće `drizzle-kit generate` i javlja grešku ako nastane nova datoteka, jer to znači da migracija nije commitana.
 
 ## 9. Testiranje
 
